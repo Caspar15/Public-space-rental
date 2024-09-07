@@ -62,7 +62,15 @@
 }
 
 .day.selected {
+<<<<<<< HEAD
     background-color: #71C5D5;
+=======
+<<<<<<< HEAD
+    background-color: #71C5D5;
+=======
+    background-color: #00b3b3;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9
     color: white;
     border-radius: 50%; /* 添加圓角效果 */
 }
@@ -113,6 +121,10 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 15px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9
 }
 
 h1 {
@@ -123,6 +135,7 @@ h1 {
     margin-bottom: 20px; /* 添加下邊距以分隔其他元素 */
 }
 
+<<<<<<< HEAD
 .location-link{
     color: #71C5D5; 
     font-size: 20px; 
@@ -130,3 +143,8 @@ h1 {
     margin-bottom: 25px; /* 添加下邊距以分隔其他元素 */
 }
 
+=======
+=======
+}
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9

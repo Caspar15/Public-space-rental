@@ -102,14 +102,61 @@ header {
 }
 
 /* 按鈕與箭頭 */
+<<<<<<< HEAD
 
 
 
+=======
+.button.with-arrow {
+    font-family: 'Abril Fatface', serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+<<<<<<< HEAD
+    color: #5AB4C5;
+=======
+    color: #2CB0C0;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button.with-arrow:hover {
+<<<<<<< HEAD
+    background-color: #5AB4C5;
+=======
+    background-color: #2CB0C0;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+    color: #FFFFFF;
+}
+
+.arrow-icon {
+    width: 15px;
+    height: auto;
+    margin-left: 10px;
+    transition: filter 0.3s;
+}
+
+.button.with-arrow:hover .arrow-icon {
+    filter: brightness(0) invert(1);
+}
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9
 
 /* 歷史紀錄卡片（下方） */
 .history-card {
     background: linear-gradient(90deg, #FFFFFF, #F8F8F8);
+<<<<<<< HEAD
     border: 1px solid #5AB4C5;
+=======
+<<<<<<< HEAD
+    border: 1px solid #5AB4C5;
+=======
+    border: 1px solid #2CB0C0;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -129,17 +176,34 @@ header {
 .history-card .text-content h1 {
     font-family: 'Abhaya Libre SemiBold', serif;
     font-size: 36px;
+<<<<<<< HEAD
     color: #5AB4C5;
+=======
+<<<<<<< HEAD
+    color: #5AB4C5;
+=======
+    color: #2CB0C0;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9
 }
 
 .history-card .text-content p {
     font-family: 'Abril Fatface', serif;
     font-size: 16px;
+<<<<<<< HEAD
     color: #5AB4C5;
+=======
+<<<<<<< HEAD
+    color: #5AB4C5;
+=======
+    color: #2CB0C0;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9
     margin: -20px 0 20px 0;
 }
 
 /* 按鈕樣式（歷史紀錄 - 白底反轉） */
+<<<<<<< HEAD
 .button.with-arrow {
     font-family: 'Abril Fatface', serif;
     font-size: 16px;
@@ -185,6 +249,21 @@ header {
 }
 
 
+=======
+.history-card .button.with-arrow {
+<<<<<<< HEAD
+    background-color: #5AB4C5;
+=======
+    background-color: #2CB0C0;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+    color: #FFFFFF;
+}
+
+.history-card .arrow-icon {
+    filter: brightness(0) invert(1);
+}
+
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9
 /* 響應式設計 */
 @media (max-width: 390px) {
     .container {

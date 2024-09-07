@@ -153,6 +153,18 @@ h3 {
     font-size: 18px;
 }
 
+<<<<<<< HEAD
 input[readonly] {
     cursor: not-allowed; /* 指示不能編輯 */
 }
+=======
+<<<<<<< HEAD
+input[readonly] {
+    background-color: #f0f0f0; /* 設置 readonly input 的底色 */
+    color: #333; /* 設置文字顏色 */
+    cursor: not-allowed; /* 指示不能編輯 */
+}
+=======
+
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
+>>>>>>> bed520f134c245840b8f3775db2422e6360e79a9
