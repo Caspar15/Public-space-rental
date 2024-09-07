@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>填寫資料</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>填寫資料</h1>
+            <div class="progress-bar">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-label">挑選<br>租用時間</div>
+                </div>
+                <div class="step  active">
+                    <div class="step-number">2</div>
+                    <div class="step-label">填寫<br>資料</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">選擇<br>繳費方式</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">確認<br>內容</div>
+                </div>
+            </div>
+        </header>   
+        <form id="userInfoForm">
+            <div class="form-group">
+                <label for="name">申請人姓名</label>
+                <input type="text" id="name" name="name" readonly>
+            </div>
+            <div class="form-group">
+                <label for="id">身分證字號</label>
+                <input type="text" id="id" name="id" readonly>
+            </div>
+            <div class="form-group">
+                <label for="phone">行動電話</label>
+                <input type="tel" id="phone" name="phone" readonly>
+            </div>
+            <div class="form-group">
+                <label for="email">電子郵件</label>
+                <input type="email" id="email" name="email" readonly>
+            </div>
+            <div class="form-group">
+                <label for="activate">活動名稱</label>
+                <input type="text" id="activate" name="activate">
+            </div>
+            <div class="form-group">
+                <label for="activate">活動人數</label>
+                <input type="number" id="people" name="people">
+            </div>
+            <div class="button-group">
+                <button type="button" class="back-button" id="backButton">上一步</button>
+                <button type="submit" class="next-button">下一步</button>
+            </div>
+        </form>
+        <script src="scripts/form.js"></script>
+
+    </div>
+</body>
+</html>

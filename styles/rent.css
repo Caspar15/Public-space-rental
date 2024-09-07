@@ -1,0 +1,225 @@
+/* 全局樣式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Acme', sans-serif;
+    background-color: #FFFFFF;
+    height: 100%;
+    overflow: hidden; /* 防止溢出的留白問題 */
+}
+
+/* 容器 */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 使用全屏高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 頁面標題和返回按鈕部分 */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 15px 20px;
+    border-bottom: 1px solid #DDDDDD;
+    z-index: 100;
+    height: 60px; /* 明確設置 header 高度，避免空白 */
+    box-sizing: border-box;
+}
+
+.back-button {
+    position: absolute;
+    left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.back-arrow {
+    width: 30px;
+    height: auto;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 50px; /* 在箭頭後增加空間 */
+}
+
+/* 左右滾動的台北市地區按鈕 */
+.filter-section {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0px; /* 與 header 高度一致，避免重疊 */
+    padding: 10px 0;
+    background-color: #93D4DF;
+    overflow-x: auto;
+}
+
+.filter-wrapper {
+    display: flex;
+    padding-left: 15px;
+}
+
+.filter-button {
+    flex-shrink: 0;
+    width: 80px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.filter-button.selected {
+    background-color: #2CB0C0;
+    color: #FFFFFF;
+    border: 2px solid #2CB0C0;
+    transform: scale(1.05);
+}
+
+.filter-button:active {
+    transform: scale(0.95);
+}
+
+/* 搜索欄部分 */
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* 上下滾動的場地列表 */
+.venue-list {
+    margin-top: 20px;
+    padding: 0 20px;
+    height: calc(100vh - 150px); /* 減去 header 和 filter section 的高度 */
+    overflow-y: auto;
+}
+
+.venue-item {
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: center; /* 垂直居中對齊 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.venue-image {
+    width: 125px; /* 控制圖片的寬度 */
+    height: auto; /* 高度自動調整以保持比例 */
+    margin-right: 20px; /* 圖片和文字之間的間距 */
+    object-fit: cover; /* 裁剪圖片以適應容器 */
+    border-radius: 8px;
+}
+
+.venue-details {
+    flex: 1; /* 讓場地詳細信息部分佔據剩餘的寬度 */
+}
+a {
+    text-decoration: none;
+}
+
+.venue-name {
+    font-size: 18px;
+    color: #2CB0C0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.capacity, .location, .contact, .phone {
+    font-size: 14px;
+    color: #979797;
+    margin: 5px 0 0 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.modal-content {
+    width: 80%;
+    height: 80%;
+    /* 其他樣式 */
+}
+
+#mapButton {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #2CB0C0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#mapButton:hover {
+    background-color: #259DAD;
+    transform: translateY(-2px);
+}
+
+#mapButton:active {
+    transform: translateY(0);
+}
+
+.open-venue {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
+}
+
+.open-venue:hover {
+    transform: scale(1.02); /* 鼠標懸浮時放大 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+}
+
+
+
+
+

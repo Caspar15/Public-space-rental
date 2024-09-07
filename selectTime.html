@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇時間</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/selectTime.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>挑選租用時間</h1>
+            <div class="progress-bar">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">挑選<br>租用時間</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">填寫<br>資料</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">選擇<br>繳費方式</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">確認<br>內容</div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <h2>租借場地</h2>
+            <a href="#" class="location-link">地點</a>
+            <h2>選擇租借日期</h2>
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button class="month-nav prev-month">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <h3 class="current-month">2024年9月</h3>
+                    <button class="month-nav next-month">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="weekdays">
+                    <div>日</div><div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div>
+                </div>
+                <div class="days">
+                    <!-- 這裡將由 JavaScript 動態生成日期 -->
+                </div>
+            </div>
+            <div id="time-periods"></div>
+        </section>
+        <div class="button-group">
+            <button type="button" class="back-button" id="backButton">上一步</button>
+            <button id="nextButton" class="next-button">下一步</button>
+        </div>        
+
+    </div>
+    <script src="scripts/selectTime.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #00b3b3;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 30px;  /* 調整到圓的中心 */
+    left: 30px;  /* 從第一個圓的中心開始 */
+    right: 30px;  /* 到最後一個圓的中心結束 */
+    height: 2px;
+    background-color: #cccccc;
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 25%;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.step-label {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+    max-width: 80px;
+    position: relative;
+    z-index: 3;
+    line-height: 1.2;
+}
+
+.step.active .step-number {
+    background-color: #00b3b3;
+}
+
+.step.active .step-label {
+    color: #00b3b3;
+    font-weight: bold;
+}
+
+.step.active::after {
+    content: '';
+    position: absolute;
+    top: 30px;  /* 調整到圓的中心 */
+    left: calc(50% + 30px);  /* 從當前圓的右邊緣開始 */
+    right: calc(-50% + 30px);  /* 到下一個圓的左邊緣結束 */
+    height: 2px;
+    background-color: #00b3b3;
+    z-index: 2;
+}
+
+.step:last-child.active::after {
+    display: none;
+}
+
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.location-link {
+    color: #00b3b3;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* 按鈕之間的間距 */
+    margin-top: 20px; /* 與上方元素的間距 */
+}
+
+.back-button,
+.next-button {
+    flex: 1; /* 讓按鈕平均分配寬度 */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    width: 100%; /* 設置按鈕寬度為100% */
+}
+
+.back-button,
+.next-button {
+    background-color: #00b3b3;
+    color: white;
+}
+
+
+.next-button:active,
+.back-button:active {
+    transform: scale(0.95);
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+input[readonly] {
+    background-color: #f0f0f0; /* 設置 readonly input 的底色 */
+    color: #333; /* 設置文字顏色 */
+    cursor: not-allowed; /* 指示不能編輯 */
+}

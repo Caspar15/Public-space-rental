@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>確認內容</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/order.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>確認內容</h1>
+            <div class="progress-bar">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-label">挑選<br>租用時間</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">填寫<br>資料</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">選擇<br>繳費方式</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">4</div>
+                    <div class="step-label">確認<br>內容</div>
+                </div>
+            </div>
+        </header> 
+        <main>
+            <div id="orderInfo"></div>
+        </main>  
+        <div class="button-group">
+            <button type="submit" class="next-button" id="nextButton">回主畫面</button>
+        </div>
+        <script src="scripts/confirmOrder.js"></script>
+    </div>
+</body>
+</html>
