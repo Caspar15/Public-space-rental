@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>確認內容</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/payment.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>確認內容</h1>
+            <div class="progress-bar">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-label">挑選<br>租用時間</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">填寫<br>資料</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">3</div>
+                    <div class="step-label">選擇<br>繳費方式</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">確認<br>內容</div>
+                </div>
+            </div>
+        </header>
+        <h1>選擇繳費方式</h1>
+        <div class="payment-options">
+            <div class="payment-option" data-method="credit">
+                <input type="radio" name="payment" id="credit" style="display:none;">
+                <img src="assets/credit-card.png" alt="信用卡">
+                <span>信用卡</span>
+            </div>
+            <div class="payment-option" data-method="external-credit">
+                <input type="radio" name="payment" id="external-credit" style="display:none;">
+                <img src="assets/credit-card.png" alt="外部信用卡">
+                <span>外部信用卡</span>
+            </div>
+            <div class="payment-option" data-method="external-debit">
+                <input type="radio" name="payment" id="external-debit" style="display:none;">
+                <img src="assets/payment.png" alt="外部扣款卡">
+                <span>外部扣款卡</span>
+            </div>
+            <div class="payment-option" data-method="cash">
+                <input type="radio" name="payment" id="cash" style="display:none;">
+                <img src="assets/coins.png" alt="現金">
+                <span>現金</span>
+            </div>
+            <div class="payment-option" data-method="store-credit">
+                <input type="radio" name="payment" id="store-credit" style="display:none;">
+                <img src="assets/card.png" alt="商店信用">
+                <span>商店信用</span>
+            </div>
+            <div class="payment-option" data-method="cheque">
+                <input type="radio" name="payment" id="cheque" style="display:none;">
+                <img src="assets/Cheque.png" alt="支票">
+                <span>支票</span>
+            </div>
+        </div>
+        <div class="button-group">
+            <button type="button" class="back-button" id="backButton">上一步</button>
+            <button type="submit" class="next-button" id="nextButton">送出訂單</button>
+        </div>
+    </div>
+    <script src="scripts/selectPayment.js"></script>
+</body>
+</html>
