@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>挑選租用場地</title>
+    <link rel="stylesheet" href="styles/rent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- 在 body 標籤內，container div 之前添加 -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="container">
+        <!-- 左右滾動的台北市地區按鈕 -->
+        <div class="filter-section">
+            <div class="filter-wrapper">
+                <div class="filter-button all" data-district="全部">全部</div>
+                <div class="filter-button" data-district="中正區">中正區</div>
+                <div class="filter-button" data-district="大同區">大同區</div>
+                <div class="filter-button" data-district="中山區">中山區</div>
+                <div class="filter-button" data-district="萬華區">萬華區</div>
+                <div class="filter-button" data-district="信義區">信義區</div>
+                <div class="filter-button" data-district="松山區">松山區</div>
+                <div class="filter-button" data-district="大安區">大安區</div>
+                <div class="filter-button" data-district="內湖區">內湖區</div>
+                <div class="filter-button" data-district="士林區">士林區</div>
+                <div class="filter-button" data-district="北投區">北投區</div>
+                <div class="filter-button" data-district="南港區">南港區</div>
+                <div class="filter-button" data-district="文山區">文山區</div>                
+            </div>
+        </div>
+
+        <!-- 搜索欄 -->
+        <div class="search-and-map-section">
+            <div class="search-bar">
+                <input type="text" placeholder="搜尋租借場館">
+                <div class="search-icon">
+                    <img src="assets/search-icon.png" alt="Search">
+                </div>
+            </div>
+            <button id="mapButton">
+                <i class="fas fa-map-marked-alt"></i>
+                查看地圖
+            </button>
+        </div>
+
+        <!-- 地圖模態框 -->
+        <div id="mapModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="map"></div>
+            </div>
+        </div>
+
+        <!-- 場地列表 -->
+        <div class="venue-list"></div>
+    </div>
+
+    <!-- Google Maps API 以及自定義腳本 -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL2Ls4kXA7bZjLsMkVcYkw1VtP4k2kIxI&callback=initMap" async defer></script>
+    <script src="scripts/rent.js"></script>
+    <script src="scripts/map.js"></script>
+</body>
+</html>

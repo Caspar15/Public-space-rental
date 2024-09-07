@@ -1,0 +1,132 @@
+.calendar {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.month-nav {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.month-nav:hover {
+    background-color: #f0f0f0;
+}
+
+.month-nav svg {
+    fill: #333;
+}
+
+.current-month {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* 移除了邊框 */
+}
+
+.day:hover:not(.disabled):not(.selected) {
+    background-color: #f0f0f0;
+    border-radius: 50%; /* 添加圓角效果 */
+}
+
+.day.selected {
+    background-color: #71C5D5;
+    color: white;
+    border-radius: 50%; /* 添加圓角效果 */
+}
+
+.day.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.time-slot {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    text-align: center;
+    font-size: 16px;
+    outline: none; /* 移除點擊時的輪廓 */
+}
+
+.time-slot:hover {
+    background-color: #00b3b3;
+    color: white;
+}
+
+.time-slot:active {
+    transform: scale(0.98); /* 點擊時的縮小效果 */
+}
+
+.time-slot.selected {
+    background-color: #00b3b3;
+    color: white;
+    /*box-shadow: 0 0 0 2px white, 0 0 0 4px #00b3b3;  添加雙重邊框效果 */
+}
+
+
+#time-periods {
+    margin-top: 20px;
+}
+
+.slots-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #71C5D5; 
+    font-size: 25px; 
+    font-weight: bold; 
+    text-align: center; /* 使文字居中對齊 */
+    margin-bottom: 20px; /* 添加下邊距以分隔其他元素 */
+}
+
+.location-link{
+    color: #71C5D5; 
+    font-size: 20px; 
+    font-weight: wrap; 
+    margin-bottom: 25px; /* 添加下邊距以分隔其他元素 */
+}
+

@@ -1,0 +1,203 @@
+/* 全局樣式 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 卡片佈局 */
+.container {
+    position: relative;
+    max-width: 390px; /* 保持容器最大寬度 */
+    width: 100%; /* 確保容器佔滿可用空間 */
+    min-height: 100vh; /* 改為使用視窗高度，避免固定高度導致空白 */
+    background-color: #FFFFFF;
+    margin: 0 auto; /* 這將使容器居中 */
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 將內容從頂部開始 */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.logo {
+    width: 146px;
+}
+
+/* 卡片樣式 */
+.card {
+    width: calc(100% - 30px); /* 使用 calc 來確保卡片在較小螢幕上也能保持居中 */
+    max-width: 345px; /* 限制最大寬度 */
+    height: 212px;
+    margin: 20px auto; /* 保證卡片在容器內居中 */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 卡片懸停效果 */
+.card:hover {
+    transform: scale(1.05); /* 當懸停時卡片稍微放大 */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25); /* 增加陰影效果 */
+}
+
+/* 租借場地卡片（上方） */
+.rent-card {
+    background: linear-gradient(90deg, #2CB0C0, #E8F0FE);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.left-icon {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.text-content {
+    flex-grow: 1;
+}
+
+.text-content h1 {
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.text-content p {
+    font-family: 'Abril Fatface', serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: -20px 0 20px 0;
+}
+
+/* 按鈕與箭頭 */
+
+
+
+
+/* 歷史紀錄卡片（下方） */
+.history-card {
+    background: linear-gradient(90deg, #FFFFFF, #F8F8F8);
+    border: 1px solid #5AB4C5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.right-icon {
+    width: 100px;
+    height: auto;
+    margin-left: -8px;
+    margin-right: 25px;
+}
+
+.history-card .text-content h1 {
+    font-family: 'Abhaya Libre SemiBold', serif;
+    font-size: 36px;
+    color: #5AB4C5;
+}
+
+.history-card .text-content p {
+    font-family: 'Abril Fatface', serif;
+    font-size: 16px;
+    color: #5AB4C5;
+    margin: -20px 0 20px 0;
+}
+
+/* 按鈕樣式（歷史紀錄 - 白底反轉） */
+.button.with-arrow {
+    font-family: 'Abril Fatface', serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #5AB4C5;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button.with-arrow {
+    font-family: 'Abril Fatface', serif;
+    font-size: 16px;
+    background-color: #FFFFFF; /* 初始背景颜色 */
+    color: #5AB4C5; /* 初始文字颜色 */
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* 添加边框颜色的过渡效果 */
+    border: 2px solid #5AB4C5; /* 添加外框颜色 */
+}
+
+.button.with-arrow:hover {
+    background-color: #5AB4C5; /* 悬浮时背景颜色 */
+    color: #FFFFFF; /* 悬浮时文字颜色 */
+    border-color: #FFFFFF; /* 悬浮时外框颜色 */
+}
+
+.arrow-icon {
+    width: 15px;
+    height: auto;
+    margin-left: 10px;
+    transition: filter 0.3s;
+}
+
+.button.with-arrow:hover .arrow-icon {
+    filter: brightness(0) invert(1); /* 悬浮时箭头的颜色反转 */
+}
+
+
+/* 響應式設計 */
+@media (max-width: 390px) {
+    .container {
+        width: 100%;
+    }
+    .card {
+        width: 90%;
+        height: auto;
+    }
+    .text-content h1 {
+        font-size: 28px;
+    }
+    .text-content p {
+        font-size: 14px;
+    }
+}

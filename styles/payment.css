@@ -1,0 +1,39 @@
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #f0f0f0;
+}
+
+.payment-option.selected {
+    border-color: #00b3b3;
+    background-color: #e6ffff;
+}
+
+.payment-option img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.payment-option span {
+    font-size: 14px;
+    text-align: center;
+}
+
