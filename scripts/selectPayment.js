@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const paymentOptions = document.querySelectorAll('.payment-option');
     const nextButton = document.getElementById('nextButton');
+<<<<<<< HEAD
     const selectedVenue = JSON.parse(localStorage.getItem('selectedVenue'));
     const selectedDate = localStorage.getItem('selectedDate');
     const selectedTimeSlot = localStorage.getItem('selectedTimeSlot');
@@ -9,11 +10,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     restorePaymentSelection();
 
+=======
+    let selectedMethod = null;
+    
+    restorePaymentSelection();
+    
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
     paymentOptions.forEach(option => {
         option.addEventListener('click', function() {
             selectPaymentMethod(this.dataset.method);
         });
     });
+<<<<<<< HEAD
 
     nextButton.addEventListener('click', function() {
         if (selectedMethod) {
@@ -49,11 +57,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('提交付款信息時發生錯誤:', error);
                 alert('提交付款信息失敗，請稍後再試');
             });
+=======
+    
+    nextButton.addEventListener('click', function() {
+        if (selectedMethod) {
+            localStorage.setItem('paymentMethod', selectedMethod);
+            alert('訂單已完成！');
+            window.location.href = 'confirmOrder.html';
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
         } else {
             alert('請選擇一個付款方式');
         }
     });
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
     const backButton = document.getElementById('backButton');
     backButton.addEventListener('click', function() {
         window.location.href = 'fillInfo.html?restore=true';
@@ -79,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             selectPaymentMethod(savedMethod);
         }
     }
+<<<<<<< HEAD
 
     // 格式化時間段，從 "08:00 ~ 12:00" 轉換為 "2024-09-07 08:00:00"
     function formatTimeSlot(timeSlot) {
@@ -94,3 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${date} ${time}:00`;
     }
 });
+=======
+});
+
+
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c

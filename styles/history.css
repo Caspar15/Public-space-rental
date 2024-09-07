@@ -106,7 +106,11 @@ h1 {
 }
 
 .entry-status.red {
+<<<<<<< HEAD
     color: #D45251; /* 未入場顯示為紅色 */
+=======
+    color: red; /* 未入場顯示為紅色 */
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
 }
 
 .location {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // document.addEventListener('DOMContentLoaded', function() {
 //     // 模擬從後端獲取的用戶數據
 //     restoreFormData();
@@ -95,6 +96,26 @@ document.addEventListener('DOMContentLoaded', function() {
     restoreFormData();
 
     // 表單提交處理
+=======
+document.addEventListener('DOMContentLoaded', function() {
+    // 模擬從後端獲取的用戶數據
+    restoreFormData();
+
+    const userData = {
+        name: '王小明',
+        id: 'A123456789',
+        phone: '0912345678',
+        email: 'xiaoming.wang@example.com'
+    };
+
+    // 填充表單
+    document.getElementById('name').value = userData.name;
+    document.getElementById('id').value = userData.id;
+    document.getElementById('phone').value = userData.phone;
+    document.getElementById('email').value = userData.email;
+
+    // 表單提交處理：
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
     const form = document.getElementById('userInfoForm');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -102,10 +123,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(form);
         const formValues = Object.fromEntries(formData.entries());
         localStorage.setItem('formData', JSON.stringify(formValues));
+<<<<<<< HEAD
 
         // 在控制台輸出表單數據
         console.log('form data:', formValues);
         window.location.href = 'selectPayment.html';
+=======
+        
+        // 在控制台輸出表單數據
+        console.log('form data:', formValues);
+        window.location.href = 'selectPayment.html';
+        // 這裡可以添加表單驗證邏輯
+        // 如果驗證通過，可以導航到下一個頁面
+        // window.location.href = '下一個頁面的URL';
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
     });
 
     const backButton = document.getElementById('backButton');
@@ -114,7 +145,10 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'selectTime.html';
     });
 
+<<<<<<< HEAD
     // 恢復本地存儲的表單數據
+=======
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
     function restoreFormData() {
         const savedData = localStorage.getItem('formData');
         if (savedData) {
@@ -129,4 +163,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
 });

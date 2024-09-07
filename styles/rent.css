@@ -60,7 +60,11 @@ h1 {
     justify-content: flex-start;
     margin-top: 0px; /* 與 header 高度一致，避免重疊 */
     padding: 10px 0;
+<<<<<<< HEAD
     background-color: #93D4DF;
+=======
+    background-color: #2CB0C0;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
     overflow-x: auto;
 }
 
@@ -137,6 +141,7 @@ h1 {
 }
 
 .venue-item {
+<<<<<<< HEAD
     display: flex; /* 使用 Flexbox 布局 */
     align-items: center; /* 垂直居中對齊 */
     padding: 10px;
@@ -158,6 +163,28 @@ h1 {
 .venue-details {
     flex: 1; /* 讓場地詳細信息部分佔據剩餘的寬度 */
 }
+=======
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.venue-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.venue-details {
+    display: flex;
+    flex-direction: column;
+}
+
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
 a {
     text-decoration: none;
 }
@@ -174,6 +201,7 @@ a {
     color: #979797;
     margin: 5px 0 0 0;
 }
+<<<<<<< HEAD
 
 #map {
     height: 100%;
@@ -223,3 +251,5 @@ a {
 
 
 
+=======
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c

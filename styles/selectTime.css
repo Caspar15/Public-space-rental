@@ -62,7 +62,11 @@
 }
 
 .day.selected {
+<<<<<<< HEAD
     background-color: #71C5D5;
+=======
+    background-color: #00b3b3;
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
     color: white;
     border-radius: 50%; /* 添加圓角效果 */
 }
@@ -113,6 +117,7 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 15px;
+<<<<<<< HEAD
 }
 
 h1 {
@@ -123,3 +128,6 @@ h1 {
     margin-bottom: 20px; /* 添加下邊距以分隔其他元素 */
 }
 
+=======
+}
+>>>>>>> d40fb90b736defc09d0bfd3a3b69387f7156fd2c
